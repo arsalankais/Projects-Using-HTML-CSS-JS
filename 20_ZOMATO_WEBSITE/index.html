@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="head">
+        <button id="filters">Filter</button>
+        <button id="offers">Offers</button>
+        <button id="rating">Rating 4.5+</button>
+        <button id="alcohol">Serves Alcohol</button>
+        <button id="openNow">Open Now</button>
+    </div>
+    <div id="filterPopup" class="hidden">
+        <h3>Choose Filter</h3>
+        <div class="filteroption">
+            <input type="radio" name="filteroption" id="sortByRating" value="rating">
+            <label for="sortByRating">Rating: High to Low</label>
+        </div>
+        <div class="filteroption">
+            <input type="radio" name="filteroption" id="sorthightolow" value="highlow">
+            <label for="sorthightolow">Cost: High to Low</label>
+        </div>
+        <div class="filteroption">
+            <input type="radio" name="filteroption" id="costoption" value="costlow">
+            <label for="costoption">Cost: Low to High</label>
+        </div>
+
+        <div class="filteroption">
+            <input type="radio" name="filteroption" id="distanceoption" value="distance">
+            <label for="distanceoption">Distance </label>
+        </div>
+        <button id="applyfilter">Apply</button>
+        <button id="closeFilter">Close</button>
+    </div>
+    <div id="root"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>

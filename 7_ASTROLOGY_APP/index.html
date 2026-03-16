@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>🔮 Astrology Calculator</h1>
+        <p class="subtitle">Enter your birth details</p>
+
+        <form>
+            <div class="row">
+                <div class="field">
+                    <label>First Name</label>
+                    <input type="text" id="name" placeholder="Enter first name">
+                </div>
+
+                <div class="field">
+                    <label>Surname</label>
+                    <input type="text" id="surname" placeholder="Enter surname">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="field">
+                    <label>Date</label>
+                    <input type="number" id="date" placeholder="DD">
+                </div>
+
+                <div class="field">
+                    <label>Month</label>
+                    <input type="number" id="month" placeholder="MM">
+                </div>
+
+                <div class="field">
+                    <label>Year</label>
+                    <input type="number" id="year" placeholder="YYYY">
+                </div>
+            </div>
+
+            <button type="submit">Check Astrology</button>
+        </form>
+
+        <div class="result">
+            <h2>Result</h2>
+            <p id="output"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

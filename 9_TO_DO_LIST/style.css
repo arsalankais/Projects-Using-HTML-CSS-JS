@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1f2933, #0b0f14);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-app {
+    width: 380px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.todo-app h1 {
+    text-align: center;
+    color: #22d3ee;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+.input-box input:focus {
+    outline: 2px solid #22d3ee;
+}
+
+.input-box button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #22d3ee, #06b6d4);
+    color: #020617;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.input-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(34, 211, 238, 0.5);
+}
+
+.todo-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.todo-list li {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 12px 14px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e5e7eb;
+    transition: 0.3s;
+}
+
+.todo-list li span {
+    font-size: 15px;
+}
+
+.actions {
+    display: flex;
+    gap: 6px;
+}
+
+.actions button {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.actions .done {
+    background: #22c55e;
+    color: #022c22;
+}
+
+.actions .delete {
+    background: #ef4444;
+    color: #450a0a;
+}
+
+.todo-list li.completed span {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+@media (max-width: 420px) {
+    .todo-app {
+        width: 90%;
+    }
+}

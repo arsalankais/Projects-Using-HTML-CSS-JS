@@ -1,0 +1,185 @@
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fcfcfc;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#head {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1100px;
+  overflow-x: auto;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+}
+
+#head button {
+  background: white;
+  border: 1px solid #d1d1d1;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: #555;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s;
+}
+
+#head button:hover {
+  background: #f0f0f0;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card-content {
+  padding: 12px 5px;
+}
+
+.card-header,
+.card-footer,
+.card-location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #1c1c1c;
+}
+
+.rating {
+  background-color: #24963f;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.card-footer {
+  color: #696969;
+  font-size: 14px;
+}
+
+.card-location {
+  color: #9c9c9c;
+  font-size: 12px;
+  border-top: 1px solid #eee;
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+#filterPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#filterPopup h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #1c1c1c;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.filteroption {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.filteroption input[type="radio"] {
+  accent-color: #e23744;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.filteroption label {
+  font-size: 16px;
+  color: #4f4f4f;
+  cursor: pointer;
+}
+
+#applyfilter,
+#closeFilter {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#applyfilter {
+  background-color: #e23744;
+  color: white;
+}
+
+#applyfilter:hover {
+  background-color: #c82d39;
+}
+
+#closeFilter {
+  background-color: #f0f0f0;
+  color: #1c1c1c;
+}
+
+#closeFilter:hover {
+  background-color: #e0e0e0;
+}
